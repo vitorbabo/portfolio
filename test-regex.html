@@ -9,8 +9,8 @@
 
     <script>
         const testLines = [
-            '- **[Data Science Competition Winner (DSPT)](https://github.com/vitorbabo/habitacao-transparente-dashboard):** Won the challenge',
-            '- **[LLM Cost Calculator (Open Source)](https://vitorbabo.github.io/llm-cost-calculator/):** Developed a tool',
+            '- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the challenge',
+            '- **LLM Cost Calculator (Open Source) | https://vitorbabo.github.io/llm-cost-calculator/:** Developed a tool',
             '- **Water Treatment IoT Hub:** Developing an AI-powered chatbot'
         ];
 
@@ -28,9 +28,9 @@
                 results += `    Title part: ${titlePart}\n`;
                 results += `    Description: ${description}\n`;
 
-                const linkMatch = titlePart.match(/\[([^\]]+)\]\(([^)]+)\)/);
-                if (linkMatch) {
-                    results += `    → Has link: "${linkMatch[1]}" → ${linkMatch[2]}\n`;
+                if (titlePart.includes('|')) {
+                    const parts = titlePart.split('|');
+                    results += `    → Has link: "${parts[0].trim()}" → ${parts[1].trim()}\n`;
                 } else {
                     results += `    → No link, plain title\n`;
                 }
