@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Test</title>
+</head>
+<body>
+    <h1>Regex Test</h1>
+    <pre id="output"></pre>
+
+    <script>
+        const testLines = [
+            '- **[Data Science Competition Winner (DSPT)](https://github.com/vitorbabo/habitacao-transparente-dashboard):** Won the challenge',
+            '- **[LLM Cost Calculator (Open Source)](https://vitorbabo.github.io/llm-cost-calculator/):** Developed a tool',
+            '- **Water Treatment IoT Hub:** Developing an AI-powered chatbot'
+        ];
+
+        const output = document.getElementById('output');
+        let results = 'Testing regex pattern:\n\n';
+
+        testLines.forEach((line, i) => {
+            results += `Test ${i + 1}: ${line}\n`;
+
+            const match = line.match(/^-\s*\*\*([^*]+)\*\*:\s*(.+)/);
+            if (match) {
+                const titlePart = match[1].trim();
+                const description = match[2].trim();
+                results += `  ✓ Matched!\n`;
+                results += `    Title part: ${titlePart}\n`;
+                results += `    Description: ${description}\n`;
+
+                const linkMatch = titlePart.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                if (linkMatch) {
+                    results += `    → Has link: "${linkMatch[1]}" → ${linkMatch[2]}\n`;
+                } else {
+                    results += `    → No link, plain title\n`;
+                }
+            } else {
+                results += `  ✗ No match!\n`;
+            }
+            results += '\n';
+        });
+
+        output.textContent = results;
+    </script>
+</body>
+</html>

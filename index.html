@@ -338,6 +338,7 @@
                     }
                 }
 
+                console.log('Extracted projects:', projects);
                 return projects;
             }
 
@@ -528,11 +529,13 @@
 
             renderProjects() {
                 const container = document.getElementById('projects-container');
+                console.log('renderProjects called, projects:', this.data.projects);
                 if (!this.data.projects) return;
 
                 container.innerHTML = '';
 
                 this.data.projects.forEach(project => {
+                    console.log('Rendering project:', project);
                     const card = document.createElement('div');
                     card.className = 'flex flex-col gap-4 rounded-xl border border-white/10 bg-[#332839]/30 p-5 transition-transform hover:-translate-y-1';
 
