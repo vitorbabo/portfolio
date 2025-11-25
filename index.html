@@ -311,13 +311,30 @@
                     line = line.trim();
                     if (!line || !line.startsWith('-')) continue;
 
-                    // Parse: - **Title:** Description
+                    // Parse: - **[Title](URL):** Description or - **Title:** Description
                     const match = line.match(/^-\s*\*\*([^:]+):\*\*\s*(.+)/);
                     if (match) {
-                        projects.push({
-                            title: match[1].trim(),
-                            description: match[2].trim()
-                        });
+                        const titlePart = match[1].trim();
+                        const description = match[2].trim();
+
+                        // Check if title contains a markdown link [text](url)
+                        const linkMatch = titlePart.match(/\[([^\]]+)\]\(([^)]+)\)/);
+
+                        if (linkMatch) {
+                            // Has a link
+                            projects.push({
+                                title: linkMatch[1].trim(),
+                                url: linkMatch[2].trim(),
+                                description: description
+                            });
+                        } else {
+                            // No link
+                            projects.push({
+                                title: titlePart,
+                                url: null,
+                                description: description
+                            });
+                        }
                     }
                 }
 
@@ -518,8 +535,23 @@
                 this.data.projects.forEach(project => {
                     const card = document.createElement('div');
                     card.className = 'flex flex-col gap-4 rounded-xl border border-white/10 bg-[#332839]/30 p-5 transition-transform hover:-translate-y-1';
+
+                    // Create title with optional link
+                    let titleHTML = '';
+                    if (project.url) {
+                        titleHTML = `
+                            <a href="${project.url}" target="_blank" rel="noopener noreferrer"
+                               class="group flex items-center gap-2 text-lg font-semibold text-white hover:text-primary transition-colors">
+                                <span>${project.title}</span>
+                                <span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </a>
+                        `;
+                    } else {
+                        titleHTML = `<h3 class="text-lg font-semibold text-white">${project.title}</h3>`;
+                    }
+
                     card.innerHTML = `
-                        <h3 class="text-lg font-semibold text-white">${project.title}</h3>
+                        ${titleHTML}
                         <p class="text-white/70">${project.description}</p>
                     `;
 
