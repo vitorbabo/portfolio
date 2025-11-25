@@ -393,24 +393,94 @@
 
                 this.data.experience.forEach((exp, index) => {
                     const isLast = index === this.data.experience.length - 1;
+                    const hasHighlights = exp.highlights && exp.highlights.length > 0;
 
                     // Timeline icon column
                     const iconCol = document.createElement('div');
-                    iconCol.className = 'flex flex-col items-center gap-1';
+                    iconCol.className = 'flex flex-col items-center gap-1 pt-1';
                     if (index > 0) iconCol.innerHTML = '<div class="h-1 w-[2px] bg-white/10"></div>';
                     iconCol.innerHTML += '<span class="material-symbols-outlined text-2xl text-primary">business_center</span>';
                     if (!isLast) iconCol.innerHTML += '<div class="w-[2px] grow bg-white/10"></div>';
 
                     // Content column
                     const contentCol = document.createElement('div');
-                    contentCol.className = `flex flex-1 flex-col ${!isLast ? 'pb-8' : ''}`;
-                    contentCol.innerHTML = `
+                    contentCol.className = `flex flex-1 flex-col gap-2 ${!isLast ? 'pb-8' : ''}`;
+
+                    // Header with expand button
+                    const header = document.createElement('div');
+                    header.className = 'flex items-start justify-between gap-3';
+
+                    const titleSection = document.createElement('div');
+                    titleSection.innerHTML = `
                         <p class="text-lg font-medium leading-normal text-white">${exp.title} at ${exp.company}</p>
                         <p class="text-base font-normal leading-normal text-white/60">${exp.period}</p>
                     `;
 
+                    header.appendChild(titleSection);
+
+                    // Add expand button if there are highlights
+                    if (hasHighlights) {
+                        const expandBtn = document.createElement('button');
+                        expandBtn.className = 'expand-btn flex-shrink-0 text-primary hover:text-primary/80 transition-transform duration-200';
+                        expandBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">expand_more</span>';
+                        expandBtn.setAttribute('aria-label', 'Show details');
+                        expandBtn.setAttribute('data-index', index);
+                        header.appendChild(expandBtn);
+                    }
+
+                    contentCol.appendChild(header);
+
+                    // Highlights section (initially hidden)
+                    if (hasHighlights) {
+                        const detailsWrapper = document.createElement('div');
+                        detailsWrapper.className = 'details-wrapper overflow-hidden transition-all duration-300';
+                        detailsWrapper.style.maxHeight = '0';
+                        detailsWrapper.setAttribute('data-index', index);
+
+                        const detailsContent = document.createElement('div');
+                        detailsContent.className = 'details-content pt-2 pb-2';
+
+                        const highlightsList = document.createElement('ul');
+                        highlightsList.className = 'space-y-2 text-white/70';
+
+                        exp.highlights.forEach(highlight => {
+                            const li = document.createElement('li');
+                            li.className = 'flex gap-2';
+                            li.innerHTML = `
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-sm leading-relaxed">${highlight}</span>
+                            `;
+                            highlightsList.appendChild(li);
+                        });
+
+                        detailsContent.appendChild(highlightsList);
+                        detailsWrapper.appendChild(detailsContent);
+                        contentCol.appendChild(detailsWrapper);
+                    }
+
                     container.appendChild(iconCol);
                     container.appendChild(contentCol);
+                });
+
+                // Add click handlers for expand buttons
+                document.querySelectorAll('.expand-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const index = this.getAttribute('data-index');
+                        const wrapper = document.querySelector(`.details-wrapper[data-index="${index}"]`);
+                        const icon = this.querySelector('.material-symbols-outlined');
+
+                        if (wrapper.style.maxHeight === '0px' || wrapper.style.maxHeight === '') {
+                            // Expand
+                            wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+                            icon.style.transform = 'rotate(180deg)';
+                            this.setAttribute('aria-label', 'Hide details');
+                        } else {
+                            // Collapse
+                            wrapper.style.maxHeight = '0';
+                            icon.style.transform = 'rotate(0deg)';
+                            this.setAttribute('aria-label', 'Show details');
+                        }
+                    });
                 });
             }
 
