@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Regex Debug</title>
+</head>
+<body>
+    <h1>Regex Debug</h1>
+    <pre id="output"></pre>
+
+    <script>
+        const testLine = '- **Title:** Description';
+        const regex = /^-\s*\*\*(.+?)\*\*:\s*(.+)/;
+
+        let output = 'Testing simple line:\n';
+        output += `Line: "${testLine}"\n`;
+        output += `Regex: ${regex}\n\n`;
+
+        const match = testLine.match(regex);
+        output += `Match result: ${match}\n\n`;
+
+        if (match) {
+            output += `✓ SUCCESS!\n`;
+            output += `Full match: "${match[0]}"\n`;
+            output += `Group 1 (title): "${match[1]}"\n`;
+            output += `Group 2 (description): "${match[2]}"\n`;
+        } else {
+            output += `✗ FAILED!\n\n`;
+
+            // Try simpler patterns
+            output += 'Testing simpler patterns:\n';
+            output += `Starts with "- ": ${testLine.startsWith('- ')}\n`;
+            output += `Contains "**": ${testLine.includes('**')}\n`;
+            output += `Contains ":": ${testLine.includes(':')}\n`;
+
+            // Try even simpler regex
+            const simple1 = /^-/;
+            output += `Pattern /^-/: ${simple1.test(testLine)}\n`;
+
+            const simple2 = /^-\s*\*\*/;
+            output += `Pattern /^-\\s*\\*\\*/: ${simple2.test(testLine)}\n`;
+
+            const simple3 = /\*\*:\s*/;
+            output += `Pattern /\\*\\*:\\s*/: ${simple3.test(testLine)}\n`;
+        }
+
+        document.getElementById('output').textContent = output;
+    </script>
+</body>
+</html>
