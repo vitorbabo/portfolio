@@ -6,7 +6,7 @@ LinkedIn: linkedin.com/in/vitorpbabo
 
 ### PROFESSIONAL SUMMARY
 
-**MLOps Engineer** with 2+ years specializing in production AI systems (LLM/RAG) on AWS/Azure. Combines deep technical expertise in IaC and CI/CD with a strong focus on **technical mentorship**, having trained developers in practical AI implementation. Proven track record of establishing operational excellence and standardizing MLOps practices in enterprise environments.
+**MLOps Engineer** specializing in production AI systems, combining technical expertise in LLM deployment, RAG architectures, and cloud infrastructure (AWS/Azure) with full-stack development capabilities. Track record of building scalable AI solutions from prototype to production, with focus on operational excellence through IaC and CI/CD automation. Experienced in cross-functional collaboration, technical leadership, and establishing MLOps best practices for enterprise environments.
 
 ---
 
