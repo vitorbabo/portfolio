@@ -67,11 +67,13 @@ _December 2021 – June 2022_
 
 ### PROJECTS & ACHIEVEMENTS
 
+- **Water Treatment IoT Hub:** Developing an AI-powered chatbot for facility management to automate fault diagnosis and chemical level monitoring.
+
 - **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
 
 - **LLM Cost Calculator(Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Developed a tool for real-time cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spend.
 
-- **Water Treatment IoT Hub:** Developing an AI-powered chatbot for facility management to automate fault diagnosis and chemical level monitoring.
+- **Unity3D Real-time Simulation for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Created a digital twin simulator integrated with IIoT for testing production line scenarios in manufacturing systems.
 
 ---
 
