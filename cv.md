@@ -43,8 +43,12 @@ _September 2022 – October 2024_
 
 - **Embedded Systems:** Co-developed control software (C++) for an automated reforestation robot, achieving **80% process automation**.
 
-- **Industry 4.0 Simulation:** Developed a real-time Industry 4.0 production line simulator in Unity3D integrated with IIoT solutions for system validation.
 
+**Continental Engineering Services | Master's Intern**
+_December 2021 – June 2022_
+
+- **Master's Thesis:** Developed a real-time production line simulator in Unity3D with integration to in-house IIoT solution for testing and validation.
+    
 
 ---
 
