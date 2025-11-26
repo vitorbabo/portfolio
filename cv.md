@@ -15,12 +15,12 @@ LinkedIn: linkedin.com/in/vitorpbabo
 **Code for All | AI Development Instructor**
 _November 2025 – Present_
 
-- **Curriculum Design:** Delivered a hands-on course for software developers focused on **practical AI integration**, **RAG architectures**, and **LLM application logic**.
+- **Curriculum:** Delivered a hands-on course for software developers focused on **practical AI integration**, **RAG architectures**, and **LLM application logic**.
 
-- **Mentorship:** Upskilled professionals in bridging traditional coding with AI workflows, guiding the development of functional prototypes using **Python**, **OpenAI APIs**, and **Vector Databases**.
+- **Mentorship:** Upskilled professionals in bridging traditional coding with AI workflows, guiding the development of functional prototypes using **Python**, **OpenAI API**, and **LangChain**.
 
 
-**Continental / AI and Data Solutions | MLOps Engineer / AI Engineer**
+**Continental | MLOps Engineer**
 _October 2024 – Present_
 
 - **AI Platform Architecture:** Led full-stack deployment of an internal AI Chat Assistant for **300+ users**, improving organizational knowledge access by **30%**.
@@ -43,21 +43,18 @@ _September 2022 – October 2024_
 
 - **Embedded Systems:** Co-developed control software (C++) for an automated reforestation robot, achieving **80% process automation**.
 
-**Continental Engineering Services | Master's Intern**
-_December 2021 – June 2022_
-
-- Developed a real-time Industry 4.0 production line simulator in Unity3D integrated with IIoT solutions for system validation.
+- **Industry 4.0 Simulation:** Developed a real-time Industry 4.0 production line simulator in Unity3D integrated with IIoT solutions for system validation.
 
 
 ---
 
 ### TECHNICAL SKILLS
 
-- **AI/ML:** LangChain, LangGraph, RAG, LLMOps (Phoenix, DeepEval), Prompt Engineering.
+- **AI/ML:** LangChain, LangGraph, OpenAI SDK, RAG, Prompt Engineering, LLMOps (Phoenix), DeepEval.
 
-- **Cloud & Infrastructure:** AWS (SageMaker, Lambda, ECS, RDS), Azure (OpenAI, AI Search), Terraform, Docker.
+- **Cloud & Infrastructure:** Azure OpenAI, Blob Storage, AI Search, AI Services, AWS SageMaker, S3, Lambda, ECS, RDS.
 
-- **DevOps:** CI/CD (GitHub Actions), Git, Observability.
+- **DevOps:** Terraform, Docker, CI/CD, GitHub Actions, Git.
 
 - **Development:** Python, C#, TypeScript, SQL, C++, FastAPI, .NET, React, PostgreSQL.
 
@@ -68,7 +65,7 @@ _December 2021 – June 2022_
 
 - **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
 
-- **LLM Cost Calculator (Open Source) | https://vitorbabo.github.io/llm-cost-calculator/:** Developed a tool for real-time cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spend.
+- **LLM Cost Calculator(Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Developed a tool for real-time cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spend.
 
 - **Water Treatment IoT Hub:** Developing an AI-powered chatbot for facility management to automate fault diagnosis and chemical level monitoring.
 

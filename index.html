@@ -78,7 +78,7 @@
                 <!-- HeroSection -->
                 <section class="flex flex-col items-center gap-8 text-center md:flex-row md:gap-10 md:text-left">
                     <div class="relative h-40 w-40 flex-shrink-0 overflow-hidden rounded-full md:h-48 md:w-48">
-                        <img id="profile-image" alt="Portrait" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRZaU4Qyki6nbA5amIMotI7szhYisCzLm63YO6Y0AEYW5UxfaFe4CoSjElbcY8PdZKMERb8kXU-2ZBk4lPVwnXJR9KXX0FFUk0bVy-lEpcsMB6Pw13Tt42Gh7ffqwUJ3J9M4yUp0VtWSL_vKMfb9U8ZcQZuQX9w7whgr4ThC7VD8nVePj_IrcPROif4C25HRP_C2LWyLJ5LQrXqxrO6n1RJR8gu0OvpMS1AYFT9vqPrkhWuf-VrEY3ZKKCL1-VHvm_cwi7Hu5Kf2E"/>
+                        <img id="profile-image" alt="Portrait" class="h-full w-full object-cover" src="pic.png"/>
                     </div>
                     <div class="flex flex-col gap-4">
                         <div class="flex flex-col gap-2">
@@ -86,14 +86,14 @@
                             <p id="hero-title" class="text-lg font-medium text-primary sm:text-xl">Loading...</p>
                             <p id="hero-summary" class="max-w-xl text-base text-white/70 sm:text-lg">Loading...</p>
                         </div>
-                        <div class="flex flex-wrap justify-center gap-3 md:justify-start">
+                        <!-- <div class="flex flex-wrap justify-center gap-3 md:justify-start">
                             <a class="flex h-11 min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold text-white transition-opacity hover:opacity-80 sm:h-12" href="#projects">
                                 <span class="truncate">View Projects</span>
                             </a>
                             <a class="flex h-11 min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#332839] px-5 text-base font-bold text-white transition-colors hover:bg-[#4c3b54] sm:h-12" href="#contact">
                                 <span class="truncate">Get In Touch</span>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
 
@@ -133,18 +133,18 @@
                 <section class="flex flex-col items-center gap-6 rounded-xl border border-white/10 bg-gradient-to-br from-primary/20 to-transparent p-8 text-center sm:p-10" id="contact">
                     <h2 class="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Let's Connect</h2>
                     <p class="max-w-md text-base text-white/70 sm:text-lg">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to get in touch.</p>
-                    <a id="contact-email" class="flex h-11 min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold text-white transition-opacity hover:opacity-80 sm:h-12" href="mailto:contact@example.com">
+                    <a id="contact-email" class="flex h-11 min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold text-white transition-opacity hover:opacity-80 sm:h-12" href="mailto:vitor.babo@outlook.com">
                         <span class="truncate">Say Hello</span>
                     </a>
                 </section>
 
                 <!-- Footer -->
                 <footer class="flex flex-col items-center justify-between gap-4 border-t border-solid border-white/10 py-6 sm:flex-row">
-                    <p id="footer-copyright" class="text-sm text-white/60">© 2024. All rights reserved.</p>
+                    <p id="footer-copyright" class="text-sm text-white/60">© 2025. All rights reserved.</p>
                     <div class="flex items-center gap-4">
-                        <a id="footer-linkedin" class="text-white/60 transition-colors hover:text-white" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a id="footer-github" class="text-white/60 transition-colors hover:text-white" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a id="footer-email" class="text-white/60 transition-colors hover:text-white" href="mailto:">Email</a>
+                        <a id="footer-linkedin" class="text-white/60 transition-colors hover:text-white" href="https://www.linkedin.com/in/vitorpbabo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a id="footer-github" class="text-white/60 transition-colors hover:text-white" href="https://github.com/vitorbabo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a id="footer-email" class="text-white/60 transition-colors hover:text-white" href="mailto:vitor.babo@outlook.com">Email</a>
                     </div>
                 </footer>
             </div>
@@ -152,6 +152,14 @@
     </div>
 
     <script>
+        // Contact Information Configuration
+        // These will be populated from cv.md during parsing
+        const CONTACT_INFO = {
+            email: 'vitor.babo@outlook.com',
+            linkedin: 'https://www.linkedin.com/in/vitorpbabo',
+            github: 'https://github.com/vitorbabo'
+        };
+
         // CV Parser and Portfolio Populator
         class CVParser {
             constructor(markdownContent) {
@@ -192,6 +200,9 @@
                     const linkedInMatch = lines[3].match(/linkedin\.com\/in\/([^\s]+)/);
                     this.data.linkedin = linkedInMatch ? `https://linkedin.com/in/${linkedInMatch[1]}` : '';
                 }
+
+                // Extract GitHub from project URLs (if available)
+                this.data.github = this.extractGitHubFromContent();
             }
 
             parseSections(lines) {
@@ -312,7 +323,7 @@
                     if (!line || !line.startsWith('-')) continue;
 
                     // Parse: - **Title | URL:** Description or - **Title:** Description
-                    const match = line.match(/^-\s*\*\*(.+?)\*\*:\s*(.+)/);
+                    const match = line.match(/^-\s*\*\*([^*]+):\*\*\s*(.+)/);
                     if (match) {
                         const titlePart = match[1].trim();
                         const description = match[2].trim();
@@ -360,6 +371,12 @@
 
                 return education;
             }
+
+            extractGitHubFromContent() {
+                // Look for github.com URLs in the entire content
+                const githubMatch = this.content.match(/github\.com\/([a-zA-Z0-9_-]+)/);
+                return githubMatch ? `https://github.com/${githubMatch[1]}` : '';
+            }
         }
 
         // Portfolio Renderer
@@ -369,6 +386,11 @@
             }
 
             render() {
+                // Populate global contact info first
+                CONTACT_INFO.email = this.data.email || '';
+                CONTACT_INFO.linkedin = this.data.linkedin || '';
+                CONTACT_INFO.github = this.data.github || '';
+
                 this.renderHeader();
                 this.renderHero();
                 this.renderExperience();
@@ -383,8 +405,13 @@
                 document.getElementById('page-title').textContent = `${this.data.name} - Portfolio`;
                 document.getElementById('nav-name').textContent = this.data.name;
 
-                if (this.data.linkedin) {
-                    document.getElementById('linkedin-link').href = this.data.linkedin;
+                // Use centralized contact info
+                if (CONTACT_INFO.linkedin) {
+                    document.getElementById('linkedin-link').href = CONTACT_INFO.linkedin;
+                }
+
+                if (CONTACT_INFO.github) {
+                    document.getElementById('github-link').href = CONTACT_INFO.github;
                 }
             }
 
@@ -393,7 +420,7 @@
 
                 // Extract title from summary
                 const titleMatch = this.data.summary?.match(/\*\*([^*]+)\*\*/);
-                const title = titleMatch ? titleMatch[1] : 'Professional';
+                const title = titleMatch ? titleMatch[1] : '';
                 document.getElementById('hero-title').textContent = title;
 
                 // Clean summary for display
@@ -590,8 +617,9 @@
             }
 
             renderContact() {
-                if (this.data.email) {
-                    document.getElementById('contact-email').href = `mailto:${this.data.email}`;
+                // Use centralized contact info
+                if (CONTACT_INFO.email) {
+                    document.getElementById('contact-email').href = `mailto:${CONTACT_INFO.email}`;
                 }
             }
 
@@ -599,12 +627,17 @@
                 const year = new Date().getFullYear();
                 document.getElementById('footer-copyright').textContent = `© ${year} ${this.data.name}. All rights reserved.`;
 
-                if (this.data.linkedin) {
-                    document.getElementById('footer-linkedin').href = this.data.linkedin;
+                // Use centralized contact info
+                if (CONTACT_INFO.linkedin) {
+                    document.getElementById('footer-linkedin').href = CONTACT_INFO.linkedin;
                 }
 
-                if (this.data.email) {
-                    document.getElementById('footer-email').href = `mailto:${this.data.email}`;
+                if (CONTACT_INFO.github) {
+                    document.getElementById('footer-github').href = CONTACT_INFO.github;
+                }
+
+                if (CONTACT_INFO.email) {
+                    document.getElementById('footer-email').href = `mailto:${CONTACT_INFO.email}`;
                 }
             }
         }
