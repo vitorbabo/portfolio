@@ -6,7 +6,7 @@ LinkedIn: linkedin.com/in/vitorpbabo
 
 ### PROFESSIONAL SUMMARY
 
-**MLOps Engineer** specializing in production AI systems, combining technical expertise in LLM deployment, RAG architectures, and cloud infrastructure (AWS/Azure) with full-stack development capabilities. Track record of building scalable AI solutions from prototype to production, with focus on operational excellence through IaC and CI/CD automation. Experienced in cross-functional collaboration, technical leadership, and establishing MLOps best practices for enterprise environments.
+**AI Engineer** with a robust background in full-stack development and MLOps, combining technical expertise in LLM deployment, RAG architectures, and cloud infrastructure (AWS/Azure). Track record of building scalable AI solutions from prototype to production, with focus on operational excellence through IaC and CI/CD automation. Experienced in cross-functional collaboration, technical leadership, and establishing MLOps best practices for enterprise environments.
 
 ---
 
@@ -67,13 +67,13 @@ _December 2021 – June 2022_
 
 ### PROJECTS & ACHIEVEMENTS
 
-- **Water Treatment IoT Hub:** Developing an AI-powered chatbot for facility management to automate fault diagnosis and chemical level monitoring.
+- **Water Treatment IoT Hub (Open Source) | https://vitorbabo.github.io/hydros:** Water treatment plant simulation and edge gateway. Supports multiple plants with centralized templates and protocol clients Perfect for both simulation and production data collection from real PLCs. 
 
-- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
+- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge from **DSPT** by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
 
-- **LLM Cost Calculator(Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Developed a tool for real-time cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spend.
+- **LLM Cost Calculator (Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Tool for cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spending.
 
-- **Unity3D Real-time Simulation for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Created a digital twin simulator integrated with IIoT for testing production line scenarios in manufacturing systems.
+- **UDigital twin simulator for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Digital twin simulator developed in Unity3D and integrated with IIoT solution for simulation/testing production line scenarios in manufacturing systems.
 
 ---
 
@@ -89,7 +89,7 @@ B.Sc. Electrical and Computer Engineering | University of Porto | 2017 – 2020
 
 - **Azure AI Engineer (AZ-102)** (Ongoing)
 
-- **IBM Applied DevOps Engineering** (Coursera)
+- **IBM Applied DevOps Engineering**
 
 
 ---
