@@ -12,7 +12,7 @@ LinkedIn: linkedin.com/in/vitorpbabo
 
 ### WORK EXPERIENCE
 
-**Code for All | AI Development Instructor**
+**Code for All | AI Instructor**
 _November 2025 – Present_
 
 - **Curriculum:** Delivered a hands-on course for software developers focused on **practical AI integration**, **RAG architectures**, and **LLM application logic**.
@@ -23,7 +23,7 @@ _November 2025 – Present_
 **Continental | MLOps Engineer**
 _October 2024 – Present_
 
-- **AI Platform Architecture:** Led full-stack deployment of an internal AI Chat Assistant for **300+ users**, improving organizational knowledge access by **30%**.
+- **AI Platform Architecture:** Led full-stack deployment of a platform for AI Chat Assistants used by **300+ users**, improving organizational knowledge access by **30%**.
 
 - **RAG Implementation:** Engineered agentic retrieval patterns using **Azure OpenAI, LangChain, and LangGraph**, significantly improving query accuracy for critical internal data.
 
