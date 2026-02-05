@@ -69,11 +69,11 @@ _December 2021 – June 2022_
 
 - **Water Treatment IoT Hub (Open Source) | https://vitorbabo.github.io/hydros:** Water treatment plant simulation and edge gateway. Supports multiple plants with centralized templates and protocol clients Perfect for both simulation and production data collection from real PLCs. 
 
-- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge from **DSPT** by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
-
 - **LLM Cost Calculator (Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Tool for cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spending.
 
-- **UDigital twin simulator for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Digital twin simulator developed in Unity3D and integrated with IIoT solution for simulation/testing production line scenarios in manufacturing systems.
+- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge from **DSPT** by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
+- 
+- **Digital twin simulator for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Digital twin simulator developed in Unity3D and integrated with IIoT solution for simulation/testing production line scenarios in manufacturing systems.
 
 ---
 
