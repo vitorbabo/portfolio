@@ -54,7 +54,7 @@ _December 2021 – June 2022_
 
 ### TECHNICAL SKILLS
 
-- **AI/ML:** LangChain, LangGraph, OpenAI SDK, RAG, Prompt Engineering, LLMOps (Phoenix), DeepEval.
+- **AI/ML:** LangChain, LangGraph, RAG, Prompt Engineering, LLMOps, Evals
 
 - **Cloud & Infrastructure:** Azure OpenAI, Blob Storage, AI Search, AI Services, AWS SageMaker, S3, Lambda, ECS, RDS.
 
@@ -71,7 +71,7 @@ _December 2021 – June 2022_
 
 - **LLM Cost Calculator (Open Source) | https://vitorbabo.github.io/llm-cost-calculator:** Tool for cost estimation across major providers (OpenAI, Anthropic), enabling developers to optimize API spending.
 
-- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge from **DSPT** by deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
+- **Data Science Competition Winner (DSPT) | https://github.com/vitorbabo/habitacao-transparente-dashboard:** Won the "Habitação Transparente" challenge from DSPT by developing and deploying a dynamic dashboard for the Portuguese housing market; prize money donated to social housing.
 - 
 - **Digital twin simulator for Industry 4.0 | https://youtu.be/Zj2qEWZ0iDU:** Digital twin simulator developed in Unity3D and integrated with IIoT solution for simulation/testing production line scenarios in manufacturing systems.
 
