@@ -47,7 +47,7 @@ _September 2022 – October 2024_
 **Continental Engineering Services | Master's Intern**
 _December 2021 – June 2022_
 
-- **Master's Thesis:** Developed a real-time production line simulator in Unity3D with integration to in-house IIoT solution for testing and validation.
+- **Master's Thesis:** Developed a real-time production line simulator in Unity3D with integration to in-house IIoT solution for Digital Twin testing and validation.
     
 
 ---
@@ -79,7 +79,7 @@ _December 2021 – June 2022_
 
 ### EDUCATION
 
-M.Sc. Electrical and Computer Engineering (Ind. Automation & Robotics) | University of Porto | 2020 – 2022
+M.Sc. Electrical and Computer Engineering (Industrial Automation & Robotics) | University of Porto | 2020 – 2022
 
 B.Sc. Electrical and Computer Engineering | University of Porto | 2017 – 2020
 
