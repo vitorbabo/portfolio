@@ -6,7 +6,7 @@ LinkedIn: linkedin.com/in/vitorpbabo
 
 ### PROFESSIONAL SUMMARY
 
-**MLOps Engineer** specializing in production AI systems, combining technical expertise in LLM deployment, RAG architectures, and cloud infrastructure (AWS/Azure) with full-stack development capabilities. Track record of building scalable AI solutions from prototype to production, with focus on operational excellence through IaC and CI/CD automation. Experienced in cross-functional collaboration, technical leadership, and establishing MLOps best practices for enterprise environments.
+**MLOps/AI Engineer** specializing in production AI systems, combining technical expertise in LLM deployment, RAG architectures, and cloud infrastructure (AWS/Azure) with full-stack development capabilities. Track record of building scalable AI solutions from prototype to production, with focus on operational excellence through IaC and CI/CD automation. Experienced in cross-functional collaboration, technical leadership, and establishing MLOps best practices for enterprise environments.
 
 ---
 
@@ -20,7 +20,7 @@ _November 2025 – Present_
 - **Mentorship:** Upskilled professionals in bridging traditional coding with AI workflows, guiding the development of functional prototypes using **Python**, **OpenAI API**, and **LangChain**.
 
 
-**Continental | MLOps Engineer**
+**Continental | MLOps/AI Engineer**
 _October 2024 – Present_
 
 - **AI Platform Architecture:** Led full-stack deployment of an internal AI Chat Assistant for **300+ users**, improving organizational knowledge access by **30%**.

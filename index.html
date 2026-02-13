@@ -9,6 +9,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -58,11 +59,12 @@
                     <a class="text-sm font-medium text-white/80 transition-colors hover:text-white" href="#education">Education</a>
                 </nav>
                 <div class="flex items-center gap-2">
-                    <a id="contact-btn" class="flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white transition-opacity hover:opacity-80 sm:h-10 sm:px-5" href="#contact">
-                        <span class="truncate">Contact</span>
+                    <a id="contact-btn" class="flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white transition-opacity hover:opacity-80 sm:h-10 sm:px-5" href="CV.pdf" download="CV.pdf">
+                        <i aria-hidden="true" class="fa-solid fa-download text-xs mr-2"></i>
+                        <span class="truncate">Download CV</span>
                     </a>
                     <a id="linkedin-link" class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#332839] text-white transition-colors hover:bg-[#4c3b54] sm:h-10 sm:w-10" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="material-symbols-outlined text-xl">link</span>
+                        <i aria-hidden="true" class="fa-brands fa-linkedin-in text-base"></i>
                     </a>
                     <a id="github-link" class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#332839] text-white transition-colors hover:bg-[#4c3b54] sm:h-10 sm:w-10" href="#" target="_blank" rel="noopener noreferrer">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
@@ -156,7 +158,8 @@
         const CONTACT_INFO = {
             email: 'vitor.babo@outlook.com',
             linkedin: 'https://www.linkedin.com/in/vitorpbabo',
-            github: 'https://github.com/vitorbabo'
+            github: 'https://github.com/vitorbabo',
+            cv: 'CV.pdf'
         };
 
         // CV Parser and Portfolio Populator
@@ -411,6 +414,10 @@
 
                 if (CONTACT_INFO.github) {
                     document.getElementById('github-link').href = CONTACT_INFO.github;
+                }
+
+                if (CONTACT_INFO.cv) {
+                    document.getElementById('contact-btn').href = CONTACT_INFO.cv;
                 }
             }
 
